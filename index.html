@@ -1,19 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herzlich Willkommen!</title>
     <!-- <script src="./main.js"></script> -->
     <!-- <script src="./task.js"></script> -->
-    <script src="./task2.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to German Bureaucracy.</h1>
-    <h2>Do you qualify for the coveted permanent residence?</h2>
-    <h2><a onclick="permit()" id="link" href="">Answer a few of our questions to find out.</a></h2>
+    <section class="intro">
+        <h1>Welcome to German Bureaucracy.</h1>
+        <h2>Do you qualify for the coveted permanent residence?</h2>
+        <h2>Answer a few of our questions to find out.</h2>
+
+        <a class="start" href="#form">
+            <div class="btn-main">Start</div>
+        </a>
+    </section>
+
+
+    <form id="form" action="">
+        <div class="q-box">
+            <p>Are you currently residing in Germany on a work permit basis?</p>
+
+            <input type="radio" name="workPermit" id="workPermit" value="Yes">
+            <label for="workPermit">Yes</label>
+
+            <input type="radio" name="workPermit" id="workPermit" value="No">
+            <label for="workPermit">No</label>
+
+            <a class="next" href="#asylumResidentQ">
+                <div class="btn">Next</div>
+            </a>
+
+        </div>
+
+        <div class="q-box" id="asylumResidentQ">
+            <p>Are you residing in Germany as an asylum seeker?</p>
+
+            <input type="radio" name="asylumResident" id="asylumResident" value="Yes">
+            <label for="asylumResident">Yes</label>
+
+            <input type="radio" name="asylumResident" id="asylumResident" value="No">
+            <label for="asylumResident">No</label>
+
+            <a class="next" href="#blueCardQ">
+                <div class="btn">Next</div>
+            </a>
+        </div>
+
+        <div class="q-box" id="blueCardQ">
+            <p>Are you currently residing in Germany on a Blue Card basis?</p>
+
+            <input type="radio" name="blueCard" id="blueCard" value="Yes">
+            <label for="blueCard">Yes</label>
+
+            <input type="radio" name="blueCard" id="blueCard" value="No">
+            <label for="blueCard">No</label>
+
+            <a class="next" href="#marriedGermanQ">
+                <div class="btn">Next</div>
+            </a>
+        </div>
+
+        <div class="q-box" id="marriedGermanQ">
+            <p>Have you been married to a German citizen for more than 3 years?</p>
+
+            <input type="radio" name="marriedGerman" id="marriedGerman" value="Yes">
+            <label for="marriedGerman">Yes</label>
+
+            <input type="radio" name="marriedGerman" id="marriedGerman" value="No">
+            <label for="marriedGerman">No</label>
+
+            <a class="next" href="#residencePermitQ">
+                <div class="btn">Next</div>
+            </a>
+        </div>
+
+        <div class="q-box" id="residencePermitQ">
+            <p>Do you have a valid residence permit?</p>
+
+            <input type="radio" name="residencePermit" id="residencePermit" value="Yes">
+            <label for="residencePermit">Yes</label>
+
+            <input type="radio" name="residencePermit" id="residencePermit" value="No">
+            <label for="residencePermit">No</label>
+
+            <a class="next" href="#yearsInGermanyQ">
+                <div class="btn">Next</div>
+            </a>
+        </div>
+
+
+
+        <div class="q-box" id="yearsInGermanyQ">
+            <p>How many years have you been living in Germany?</p>
+            <label for="yearsInGermany"></label>
+            <input type="number" name="yearsInGermany" id="yearsInGermany" min="1" placeholder="Select number">
+
+            <a class="next" href="#yearsWorkingQ">
+                <div class="btn">Next</div>
+            </a>
+        </div>
+
+        <div class="q-box" id="yearsWorkingQ">
+            <p>How many years have you worked in Germany?</p>
+            <label for="yearsWorking"></label>
+            <input type="number" name="yearsWorking" id="yearsWorking" min="0" placeholder="Select number">
+
+            <a class="next" href="#currentlyEmployedQ">
+                <div class="btn">Next</div>
+            </a>
+
+        </div>
+
+        <div class="q-box" id="currentlyEmployedQ">
+            <p>Are you currently employed?</p>
+
+            <input type="radio" name="currentlyEmployed" id="currentlyEmployed" value="Yes">
+            <label for="currentlyEmployed">Yes</label>
+
+            <input type="radio" name="currentlyEmployed" id="currentlyEmployed" value="No">
+            <label for="currentlyEmployed">No</label>
+
+            <a class="next" href="#asylumIncomeQ">
+            <div class="btn">Next</div>
+            </a>
+        </div>
+
+        <div class="q-box" id="asylumIncomeQ">
+            <p>If an asylum seeker, are you able to independently cover 70% of your living costs?</p>
+
+            <input type="radio" name="asylumIncome" id="asylumIncome">
+            <label for="asylumIncome">Yes</label>
+            
+            <input type="radio" name="asylumIncome" id="asylumIncome">
+            <label for="asylumIncome">No</label>
+            
+            <input type="radio" name="asylumIncome" id="asylumIncome" value="NA">
+            <label for="asylumIncome">N/A</label>
+            
+
+            <a class="next" href="#germanLevelQ">
+                <div class="btn">Next</div>
+            </a>
+
+        </div>
+
+        <div class="q-box" id="germanLevelQ">
+            <p>What is your German level?</p>
+            <select name="germanLevel" id="germanLevel">
+                <option value="a1">A1</option>
+                <option value="a2">A2</option>
+                <option value="b1">B1</option>
+                <option value="b2">B2</option>
+                <option value="c1">C1</option>
+                <option value="c2">C2</option>
+            </select>
+
+            <br>
+            <button class="btn-main" type="submit">Submit</button>
+
+    </form>
+    <script src="./task2.js"></script>
 </body>
+
 </html>
